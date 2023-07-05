@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>로그인</title>
+  <link rel="stylesheet" type="text/css" href="/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+<body>
+  <%- include('header', {userId: userId}) %>
+  <% if (error) { %> 
+    <script>
+      alert('존재하지 않는 ID 또는 PW가 틀립니다.')
+    </script> 
+  <% } %>
+  <div class="main">
+    <div class="container">
+      <h1>로그인</h1>
+      <form id="login_form" action="/login" method="post">
+        <input type="text" id="username" name="username" placeholder="아이디" required>
+        <input type="password" id="password" name="password" placeholder="비밀번호" required>
+        <button id="login_btn" type="submit">로그인</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

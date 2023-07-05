@@ -1,0 +1,29 @@
+<header id="header">
+  <div id="header_left">
+    <div id="logo"><a href="/"><img src="/images/logo.png"></a></div>
+  </div>
+  <div id="header_right">
+    <ul id="menuList">
+      <li class="selectList"><a href="sangdam">상담신청</a></li>
+      <li class="selectList"><a href="link">이용수칙</a></li>
+      <% if(userId) {%>
+      <li class="menu selectList">
+        <span><%= userId%></span>
+        <ul class="sub up">
+          <li>
+            <a href="/mypage?uid=<%= userId%>">마이페이지</a>
+          </li>
+          <li>
+            <a href="/logout">로그아웃</a>
+          </li>
+        </ul>
+      </li>
+      <% } else {%>
+        <li id="login" class="selectList"><a href="/login">로그인</a></li>
+        <li id="signup" class="selectList"><a href="/signup">회원가입</a></li>
+      <% } %>
+    
+    </ul>
+  </div>
+  <script src="/js/myPage.js"></script>
+</header>
