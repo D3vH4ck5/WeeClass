@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'Humanbumsuk';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#header{
+  font-family: "Humanbumsuk";
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1000;
+}
+
+#header_left{
+  float: left;
+}
+
+#logo{
+  height: 70px;
+}
+
+#logo img{
+  margin-left: 1rem;
+  margin-top: 5px;
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+}
+
+#header_right{
+  float: right;
+  height: 70px;
+}
+
+#menuList{
+  margin: 0;
+  height: 70px;
+  line-height: 70px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectList {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  width: 6rem;
+  color: rgb(107, 107, 107);
+}
+
+.selectList a {
+  color: rgb(107, 107, 107);
+  text-decoration: none;
+  outline: none;
+}
+
+.selectList a:hover{
+  color: rgb(0, 0, 0);
+}
+
+.menu {
+  width: 7rem;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.menu span:hover{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.menu > .sub {
+  padding: 0;
+  display: none;
+  height: 0px;
+  list-style: none;
+  position: relative;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.menu > .sub li {
+  background-color: rgba(255, 255, 255, 0);
+  height: 50px;
+  line-height: 50px;
+}
+
+.menu > .sub li > a {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(107, 107, 107);
+}
+
+.menu > .sub li > a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.menu > .sub.up {
+  height: 0px;
+  animation-name: slide_up;
+  animation-duration: 0.3s;
+}
+
+.menu > .sub.down {
+  height: 100px;
+  animation-name: slide_down;
+  animation-duration: 0.3s;
+}
+
+@keyframes slide_up {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes slide_down {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}

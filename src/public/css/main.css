@@ -1,0 +1,112 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#main{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f5;
+}
+
+#main h1 {
+  margin: 0;
+}
+
+#bg1{
+  width: 800px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#bg2{
+  width: 800px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#text_bg{
+  font-size: 100px;
+  position: absolute;
+  left: 54px;
+  bottom: 34px;
+  color: white;
+}
+
+.selectList {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  width: 6rem;
+  color: rgb(228, 228, 228);
+}
+
+.selectList a {
+  color: rgb(228, 228, 228);
+  text-decoration: none;
+  outline: none;
+}
+
+.menu span:hover{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.selectList a:hover{
+  color: rgb(255, 255, 255);
+}
+
+.menu > .sub li > a {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(228, 228, 228);
+}
+
+.menu > .sub li > a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+#mainMo{
+  position: absolute;
+  display: flex;
+  width: 1000px;
+  left: 25rem;
+  top: 12rem;
+}
+
+#records_table{
+  width: 500px;
+  height: 590px;
+  margin-right: 2rem;
+}
+
+#records_table table{
+  border-collapse: collapse;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+tr,
+td,
+th {
+  text-align: center;
+  border: 1px solid black;
+  font-family: 'Humanbumsuk';
+  font-size: 20px;
+  width: 250px;
+}
+
+a{
+  text-decoration: none;
+}
+
+th {
+  background-color: #8C9ED0;
+}

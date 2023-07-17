@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/chat.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온라인 상담실</title>
+</head>
+
+<body>
+  <%- include('header', {userId: userId, isAdmin: isAdmin}) %>
+  <div id="llp" style="height: 70px; width: 100%;"></div>
+  <h1>온라인 상담실</h1>
+
+  <div id="chatContent">
+  </div>
+  <input id="myChat" type="text">
+  <input type="submit" id="send" value="전송">
+</body>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
+
+</html>

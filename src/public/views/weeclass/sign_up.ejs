@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" type="text/css" href="/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/css/sign_up.css">
+</head>
+<body>
+  <%- include('header', {userId: userId, isAdmin: isAdmin}) %>
+  <% if (error) { %> 
+    <script>
+      alert('존재하는 ID입니다.')
+    </script> 
+  <% } %>
+  <div class="main">
+    <div class="container">
+      <h1>회원가입</h1>
+      <form id="signup_form" action="/weeclass/signup" method="post">
+        <input type="text" id="username" name="username" placeholder="아이디" required>
+        <input type="text" id="realname" name="realname" placeholder="이름" required>
+        <input type="password" id="password" name="password" placeholder="비밀번호" required>
+        <input type="password" id="check_password" name="check_password" placeholder="비밀번호 확인" required>
+        <input type="text" id="classnum" name="classnum" placeholder="학번 ex) 2101" required>
+        <input type="tel" id="tel" name="tel" placeholder="전화번호 ex) 01012345678" required>
+        <button id="signup_btn" type="button" onclick="addCheck()">회원가입</button>
+      </form>
+    </div>
+  </div>
+  <script src="/js/sign_up.js"></script>
+</body>
+</html>

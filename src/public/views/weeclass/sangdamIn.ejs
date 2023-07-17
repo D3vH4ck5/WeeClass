@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/sangdamIn.css">
+    <title>상담 신청</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/css/login.css"> -->
+</head>
+<body>
+    <%- include('header', {userId: userId, isAdmin: isAdmin}) %>
+    <% if (error) { %> 
+        <script>
+            alert('이미 신청자가 있습니다.')
+        </script> 
+    <% } %>
+    <div class="main">
+        <div class="container">
+            <h1>상담신청</h1>
+            <form id="sangdanIn_form" action="/weeclass/sangdam" method="post">
+                <input type="text" id="sangdam_date" name="sangdam_date" placeholder="상담 날짜 ex) 2023-07-12" required>
+                <input type="text" id="sangdam_time" name="sangdam_time" placeholder="상담 교시 ex) 3" required>
+                <input type="text" id="contect" name="contect" placeholder="상담 내용 ex) 친구관계" required>
+                <button id="consulting_btn" type="submit">신청하기</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

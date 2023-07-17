@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/ahfmrpTek.css" />
+  <title>WeeClass</title>
+</head>
+<body>
+  <%- include('header', {userId: userId, isAdmin: isAdmin}) %>
+  <div id="main">
+    <img src="/images/bg1.png" id="bg1">
+    <img src="/images/bg2.png" id="bg2">
+    <h1 id="text_bg">Wee</h1>
+    <div id="mainMo">
+      <div id="records_table">
+        <table>
+          <tr>
+            <th width="10px">시간</th>
+            <th>상태</th>
+          </tr>
+          <% for(let i = 0; i < 7; i++) { %>
+            <tr>
+              <td style="background-color: rgb(237, 237, 255);"><%= i+1 %>교시</td>
+              <% if(consulatations[i] === "상담" || consulatations[i] === "없음" ) { %> <td style="background-color: rgb(255, 97, 97); color: white;"><%= consulatations[i]%></td><% }else if(consulatations[i] === "상담 신청됨") { %>
+                <td style="background-color: rgb(255, 242, 63);"><%=consulatations[i]%></td> <% } else { %>
+                <td style="background-color: rgb(100, 255, 80);"><a href="/weeclass/sangdam"><%=consulatations[i]%></a></td> <% } %>
+            </tr>
+          <% } %>
+        </table>
+      </div>
+      <div class="event">
+        <div>
+        <img class="event_content" src="/images/1.jpg" alt="이벤트" />
+        <img class="event_content" src="/images/2.jpg" alt="이벤트" />
+        <!-- <img class="event_content" src="/item/3.jpeg" alt="이벤트" />
+        <img class="event_content" src="/item/4.jpeg" alt="이벤트" /> -->
+      </div>
+    </div>
+  </div>
+  <script src="/js/ahfmrpTek.js"></script>
+</body>
+</html>

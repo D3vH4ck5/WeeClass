@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin</title>
+
+    <!-- icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+  </head>
+  <body>
+    <%- include('header', {userId: userId, isAdmin: isAdmin}) %>
+    <!-- content -->
+    <section id="content">
+      <!-- navbar -->
+      <nav></nav>
+      <!-- navbar -->
+      <!-- main -->
+      <main>
+        <ul class="box_info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3><%= times %></h3>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3><%= al %></h3>
+              <p>상담횟수</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-notepad"></i>
+            <span class="text">
+              <h3><%= nal %></h3>
+              <p>완료하지 않은 상담</p>
+            </span>
+          </li>
+        </ul>
+
+        <div class="table_data">
+          <div class="order">
+            <div class="head">
+              <h3>상담신청 확인</h3>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>학생</th>
+                  <th>시간</th>
+                  <th>신청확인</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i class="bx bxs-user-pin"></i>
+                    <p>류건모</p>
+                  </td>
+                  <td>7월 12일 2교시</td>
+                  <td><span class="status completed">확인됨</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="bx bxs-user-pin"></i>
+                    <p>박도형</p>
+                  </td>
+                  <td>7월 14일 1교시</td>
+                  <td><span class="status pending">신청확인</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="bx bxs-user-pin"></i>
+                    <p>이다은</p>
+                  </td>
+                  <td>7월 12일 3교시</td>
+                  <td><span class="status pending">신청확인</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="bx bxs-user-pin"></i>
+                    <p>한정안</p>
+                  </td>
+                  <td>7월 16일 5교시</td>
+                  <td><span class="status completed">확인됨</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="bx bxs-user-pin"></i>
+                    <p>현국영</p>
+                  </td>
+                  <td>7월 17일 7교시</td>
+                  <td><span class="status completed">확인됨</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="todo">
+            <div class="head">
+              <h3>상담기록</h3>
+            </div>
+            <ul class="todo_list">
+              <li class="completed">
+                <p>현국영</p>
+                <p>7월 17일 7교시</p>
+              </li>
+              <li class="completed">
+                <p>한정안</p>
+                <p>7월 16일 5교시</p>
+              </li>
+              <li class="not_completed">
+                <p>이다은</p>
+                <p>7월 12일 3교시</p>
+              </li>
+              <li class="completed">
+                <p>박도형</p>
+                <p>7월 14일 1교시</p>
+              </li>
+              <li class="not_completed">
+                <p>류건모</p>
+                <p>7월 12일 2교시</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <!-- main -->
+    </section>
+    <!-- content -->
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

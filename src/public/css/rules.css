@@ -1,0 +1,35 @@
+*{
+  font-family: 'Humanbumsuk';
+}
+
+.title {
+  font-size: 32px;
+  padding-bottom: 4%;
+  text-align: left;
+  color: #5c54f1;
+}
+
+.line {
+  border-left: thick solid #5c54f1;
+  height: 16rem;
+  left: 50%;
+}
+
+.text {
+  margin-left: 3%;
+}
+
+.we {
+  padding-bottom: 5%;
+}
+
+.container {
+  box-sizing: border-box;
+  text-align: left;
+  padding-top: 10%;
+  padding-left: 18%;
+  padding-right: 15%;
+  font-size: 25px;
+  background-color: #f0f0f5;
+  height: 100vh;
+}
